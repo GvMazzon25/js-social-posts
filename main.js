@@ -32,14 +32,17 @@ const posts = [
 console.log(posts);
 console.table(posts);
 
-function genPost(posts, teamContainer){
-    teamContainer.innerHTML = '';
+const postContainer = document.querySelector('.posts-list');
 
-    for(let i = 0; i < cards.length; i++){
-        const cardItem = cards[i];
-        console.log(cardItem);
+
+function genPost(posts, postContainer){
+    postContainer.innerHTML = '';
+
+    for(let i = 0; i < posts.length; i++){
+        const postItem = posts[i];
+        console.log(postItem);
     
-        teamContainer.innerHTML += `
+        postContainer.innerHTML += `
         <div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
@@ -72,3 +75,5 @@ function genPost(posts, teamContainer){
         </div>-->`
     }
 }
+
+genPost(posts, postContainer);
