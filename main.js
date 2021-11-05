@@ -47,17 +47,17 @@ function genPost(posts, postContainer){
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${posts.fotoProfilo}" alt="${posts.autor}">                    
+                        <img class="profile-pic" src="${postItem.fotoProfilo}" alt="${posts.autor}">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">${posts.autor}</div>
+                        <div class="post-meta__author">${postItem.autor}</div>
                         <div class="post-meta__time">${posts.time}</div>
                     </div>                    
                 </div>
             </div>
-            <div class="post__text">${posts.text}</div>
+            <div class="post__text">${postItem.text}</div>
             <div class="post__image">
-                <img src="${posts.immagine}" alt="">
+                <img src="${postItem.immagine}" alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
@@ -68,7 +68,7 @@ function genPost(posts, postContainer){
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${posts.likeCounter}</b> persone
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${postItem.likeCounter}</b> persone
                     </div>
                 </div> 
             </div>            
